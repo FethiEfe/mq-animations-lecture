@@ -18,6 +18,30 @@ nav {
   color: white;
 }
 
+
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: green;
+  margin-left: 10vw;
+  transition: background 1s;
+}
+
+.box:hover {
+  background: red;
+}
+
+.side-menu {
+  width: 70vw;
+  height: 91vh;
+  position: absolute;
+  top: 9vh;
+  left: 0px;
+  background: red;
+  display: none;
+}
+
 @media (max-width: 800px) {
   img {
     display: block;
@@ -27,4 +51,112 @@ nav {
   ul {
     display: none;
   }
+  .side-menu-open {
+    width: 70vw;
+    height: 91vh;
+    position: absolute;
+    top: 9vh;
+    left: 0px;
+    background: red;
+    animation: openMenu 1s;
+  }
+  .side-menu-closed {
+    animation: closeMenu 1s;
+    width: 70vw;
+    height: 91vh;
+    position: absolute;
+    top: 9vh;
+    left: 0px;
+    background: red;  
+    animation-fill-mode: forwards;
+  }
 }
+
+@keyframes openMenu {
+  from {
+    width: 0vw;
+  }
+  to {
+    width: 70vw;
+  }
+}
+
+@keyframes closeMenu {
+  from {
+    width: 70vw;
+  }
+  to {
+    width: 0vw;
+  }
+}
+
+/******* Example Keyframes ********
+/* @keyframes colorFade {
+  0% {
+    background: red;
+  }
+  100% {
+    background: green;
+    transform: rotate(45deg)
+  }
+} */
+
+/* .main {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+}
+
+
+/* ******* Anna's solution for the Harry Potter exercise ********
+.hp {
+  animation-name: intro;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes intro {
+  50% {
+    transform: translateY(40vh);
+    font-size: 2em;
+  }
+  100% {
+    transform: translateY(40vh);
+    font-size: 5em;
+  }
+} */
+
+
+/* ******* My Solution for the Harry Potter Exercise ********
+/* .hp {
+  margin-left: 40vw;
+  margin-top: 20vh;
+  animation-name: harryPotter;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  font-size: 1em;
+} */
+
+/* @keyframes harryPotter {
+  20% {
+    transform: translateY(20vh);
+    font-size: 1em;
+  }
+  100% {
+    transform: translateY(20vh);
+    font-size: 10em;
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+
